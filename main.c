@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 12:25:12 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/07 16:37:38 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/07 17:03:25 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,16 @@ int 	main()
 	// printf("ft_strncmp : %d\n", ft_strncmp("on test tout", "on tast tout", 1));
 	// printf("strncmp : %d\n", strncmp("on test tout", "on tast tout", 1));
 
-	char dst[] = "test";
+	char dst[40] = "te";
 	char src[] = "on test tout";
 
 	// ft_strlcpy
 	//printf("%lu", ft_strlen(src));
 	//printf("ft_strlcpy --> return : %lu | dst : %s\n", ft_strlcpy(dst, src, 10), dst);
-	printf("strlcpy --> return : %zu | dst : %s\n", strlcpy(dst, src, 10), dst);
+	//printf("strlcpy --> return : %zu | dst : %s\n", strlcpy(dst, src, 10), dst);
+
+	// ft_strlcat
+	printf("ft_strlcat --> return : %lu | dst : %s", ft_strlcat(dst, src, 13), dst);
+	//printf("strlcat --> return : %lu | dst : %s", strlcat(dst, src, 13), dst);
 	printf("\n\n\n");
 }
