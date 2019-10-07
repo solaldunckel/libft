@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:59:04 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/07 15:38:53 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/07 16:37:02 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t		i;
+	size_t		src_len;
 
 	i = 0;
-	while (i < dstsize)
+	src_len = ft_strlen(src);
+	while (i + 1 < dstsize)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	if (dstsize > 0)
+		dst[i] = '\0';
+	return (src_len);
 }
