@@ -6,13 +6,13 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 12:25:12 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/07 17:03:25 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/07 17:47:31 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int 	main()
+int 	main(int argc, char **argv)
 {
 	printf("\n\n\n");
 	//char c;
@@ -50,7 +50,11 @@ int 	main()
 	//printf("strlcpy --> return : %zu | dst : %s\n", strlcpy(dst, src, 10), dst);
 
 	// ft_strlcat
-	printf("ft_strlcat --> return : %lu | dst : %s", ft_strlcat(dst, src, 13), dst);
+	//printf("ft_strlcat --> return : %lu | dst : %s", ft_strlcat(dst, src, 13), dst);
 	//printf("strlcat --> return : %lu | dst : %s", strlcat(dst, src, 13), dst);
+
+	// ft_strnstr
+	// printf("ft_strnstr --> %s\n", ft_strnstr(argv[1], argv[2], 4));
+	// printf("strnstr --> %s\n", strnstr(argv[1], argv[2], 4));
 	printf("\n\n\n");
 }
