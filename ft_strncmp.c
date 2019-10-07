@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 13:50:05 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/07 14:44:47 by sdunckel         ###   ########.fr       */
+/*   Created: 2019/10/07 14:37:59 by sdunckel          #+#    #+#             */
+/*   Updated: 2019/10/07 14:54:06 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char 	*ft_strchr(const char *s, int c)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s)
+	while (*s1 && *s2 && n)
 	{
-		if (*s == c)
-			return ((char*)s);
-		s++;
+		if (*s1 > *s2)
+			return (1);
+		else if (*s1 < *s2)
+			return (-1);
+		s1++;
+		s2++;
+		n--;
 	}
-	if (*s == c)
-		return ((char*)s);
-	return (NULL);
+	return (0);
 }
