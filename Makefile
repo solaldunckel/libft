@@ -6,14 +6,16 @@
 #    By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 12:02:19 by sdunckel          #+#    #+#              #
-#    Updated: 2019/10/07 17:36:58 by sdunckel         ###   ########.fr        #
+#    Updated: 2019/10/07 18:44:01 by sdunckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
 SRCS	= ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_strlen.c \
 			ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c ft_strchr.c \
-			ft_strrchr.c ft_strncmp.c ft_strlcpy.c ft_strlcat.c ft_strnstr.c 
+			ft_strrchr.c ft_strncmp.c ft_strlcpy.c ft_strlcat.c ft_strnstr.c \
+			ft_memcpy.c ft_memccpy.c ft_bzero.c ft_memset.c ft_memmove.c \
+			ft_memchr.c ft_memcmp.c ft_calloc.c ft_strdup.c
 OBJS	= ${SRCS:.c=.o}
 HEADER	= libft.h
 
