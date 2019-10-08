@@ -6,16 +6,16 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 18:11:10 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/07 18:55:00 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:26:53 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void 	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t		i;
-	void 		*origin_dst;
+	void		*origin_dst;
 	void		*pt_dst;
 
 	pt_dst = dst;

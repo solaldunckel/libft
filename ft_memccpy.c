@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 18:01:11 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/07 18:55:40 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:27:30 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t 		i;
+	size_t		i;
 
 	i = 0;
 	while (i < n)

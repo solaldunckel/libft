@@ -6,7 +6,7 @@
 #    By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 12:02:19 by sdunckel          #+#    #+#              #
-#    Updated: 2019/10/08 14:42:49 by sdunckel         ###   ########.fr        #
+#    Updated: 2019/10/08 15:37:33 by sdunckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ RM		= rm -f
 
 ${NAME}:	${OBJS}
 			@ar -rcs ${NAME} ${OBJS}
-			@${CC} ${SRCS} main.c -I ${HEADER} -o libft_out
+			@${CC} ${CFLAGS} ${SRCS} main.c -I ${HEADER} -o libft_out
 
 %.o: %.c
 			@${CC} -c ${SRCS} ${CFLAGS} -I ${HEADER}

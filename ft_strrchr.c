@@ -6,15 +6,15 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:30:23 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/07 14:45:46 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:25:12 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char 	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char 	*p;
+	char	*p;
 
 	p = NULL;
 	while (*s)

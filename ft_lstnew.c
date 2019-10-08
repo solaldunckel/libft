@@ -6,11 +6,12 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:12:48 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 14:39:04 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:30:20 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void const *content)
 {

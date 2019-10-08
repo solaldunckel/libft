@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 12:54:59 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 13:26:18 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:23:35 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_itoa(int n)
 {
-	char 	*str;
+	char	*str;
 	int		neg;
 	int		num_len;
 

@@ -6,12 +6,12 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:43:38 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 14:49:33 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:30:13 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(void *))
 {

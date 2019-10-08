@@ -6,18 +6,21 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 12:25:12 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 13:48:57 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:38:29 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
 int 	main(int argc, char **argv)
 {
 	size_t 	i;
 	size_t 	n;
 	char c;
-
+	(void)argc;
+	(void)argv;
 	n = -12421;
 
 	printf("\n");
@@ -46,8 +49,8 @@ int 	main(int argc, char **argv)
 	printf("ft_strncmp : %d\n", ft_strncmp("on test tout", "on tast tout", 1));
 	printf("strncmp : %d\n", strncmp("on test tout", "on tast tout", 1));
 
-	char dst[40] = "te";
-	char src[] = "on test tout";
+	// char dst[40] = "te";
+	// char src[] = "on test tout";
 
 	// ft_strlcpy
 	//printf("%lu", ft_strlen(src));

@@ -6,11 +6,12 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:50:09 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 14:14:47 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:31:28 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

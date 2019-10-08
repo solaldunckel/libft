@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:02:04 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 14:03:07 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:24:25 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long 	nb;
+	long	nb;
 
 	nb = n;
 	if (nb < 0)

@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 08:49:58 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 08:50:26 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:26:16 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
-	size_t 		i;
+	size_t		i;
 	size_t		j;
 
 	i = 0;

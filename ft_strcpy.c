@@ -6,13 +6,13 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 08:55:35 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 08:57:17 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:24:44 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	int 	i;
+	int		i;
 
 	i = 0;
 	while (src[i])

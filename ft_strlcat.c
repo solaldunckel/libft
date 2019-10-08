@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:43:43 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/07 17:04:02 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:26:29 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t		i;
 	size_t		j;
-	size_t 		dst_len;
+	size_t		dst_len;
 	size_t		src_len;
 
 	j = 0;
