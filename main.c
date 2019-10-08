@@ -6,13 +6,14 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 12:25:12 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 15:38:29 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 16:28:46 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 int 	main(int argc, char **argv)
 {
@@ -46,8 +47,7 @@ int 	main(int argc, char **argv)
 	printf("strrchr : %s\n", strrchr("on test tout", 't'));
 
 	// // ft_strncmp
-	printf("ft_strncmp : %d\n", ft_strncmp("on test tout", "on tast tout", 1));
-	printf("strncmp : %d\n", strncmp("on test tout", "on tast tout", 1));
+	printf("ft_strncmp : %d // strncmp : %d\n", ft_strncmp("", "te", 1), strncmp("", "te", 1));
 
 	// char dst[40] = "te";
 	// char src[] = "on test tout";
@@ -64,6 +64,14 @@ int 	main(int argc, char **argv)
 	// ft_strnstr
 	// printf("ft_strnstr --> %s\n", ft_strnstr(argv[1], argv[2], 4));
 	// printf("strnstr --> %s\n", strnstr(argv[1], argv[2], 4));
+
+	// ft_atoi
+	char 	ato[] = "2147483647";
+	printf("ft_atoi : %d // atoi : %d\n", ft_atoi(ato), atoi(ato));
+
+	//ft_itoa
+	int		ito = -2147483648;
+	printf("ft_itoa : %s\n", ft_itoa(ito));
 
 	// ft_substr
 	printf("ft_substr : [%s]\n", ft_substr("on test tout", 3, 5));

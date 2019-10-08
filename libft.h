@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:57:51 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 15:36:17 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 16:29:22 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				ft_putchar(char c);
 void				ft_putnbr(int n);
 void				ft_putstr(char *s);
+void				ft_putendl(char *s);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
