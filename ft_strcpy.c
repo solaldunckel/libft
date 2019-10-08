@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 17:52:13 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 09:18:04 by sdunckel         ###   ########.fr       */
+/*   Created: 2019/10/08 08:55:35 by sdunckel          #+#    #+#             */
+/*   Updated: 2019/10/08 08:57:17 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	size_t		i;
-	(void)c;
+	int 	i;
+
 	i = 0;
-	while (i < len)
+	while (src[i])
 	{
-		//b = c;
-		b++;
+		dst[i] = src[i];
 		i++;
 	}
-	return (b);
+	dst[i] = '\0';
+	return (dst);
 }

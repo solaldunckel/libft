@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 17:52:13 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 09:18:04 by sdunckel         ###   ########.fr       */
+/*   Created: 2019/10/08 09:40:41 by sdunckel          #+#    #+#             */
+/*   Updated: 2019/10/08 09:52:29 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+static int		is_charset(char c, char const *set)
 {
-	size_t		i;
-	(void)c;
-	i = 0;
-	while (i < len)
+	while (*set)
 	{
-		//b = c;
-		b++;
-		i++;
+		if (*set == c)
+			return (1);
+		set++;
 	}
-	return (b);
+	return (0);
+}
+
+char			*ft_strtrim(char const *s1, char const *set)
+{
+	int		start;
+	int		end;
+
+	start = 0;
+	end = ft_strlen(s1);
+	while (!is_charset(s1[start], set))
+		start++;
+	start++;
+	while (!is_charset(s1[end], set))
+		end--;
+	return (ft_substr(s1, start, end - start));
 }

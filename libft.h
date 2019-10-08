@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:57:51 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/07 18:43:49 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 14:04:15 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,22 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *s1);
+char				*ft_strstr(const char *haystack, const char *needle);
+void				ft_putchar(char c);
+char				*ft_strcat(char *dst, const char *src);
+char				*ft_strcpy(char *dst, const char *src);
+void				ft_putnbr(int n);
+void				ft_putstr(char *s);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
+char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strtrim(char const *s1, char const *set);
+char				**ft_split(char const *s, char c);
+size_t				ft_intlen(int n);
+char				*ft_itoa(int n);
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void				ft_putchar_fd(char c, int fd);
+void				ft_putstr_fd(char *s, int fd);
+void				ft_putendl_fd(char *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
 
 #endif

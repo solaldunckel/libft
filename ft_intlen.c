@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 17:52:13 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 09:18:04 by sdunckel         ###   ########.fr       */
+/*   Created: 2019/10/08 13:03:37 by sdunckel          #+#    #+#             */
+/*   Updated: 2019/10/08 13:07:25 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+size_t		ft_intlen(int n)
 {
-	size_t		i;
-	(void)c;
-	i = 0;
-	while (i < len)
+	size_t		len;
+
+	len = 1;
+	if (n < 0)
+		n = -n;
+	while (n >= 10)
 	{
-		//b = c;
-		b++;
-		i++;
+		n = n / 10;
+		len++;
 	}
-	return (b);
+	return (len);
 }
