@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 13:50:09 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 14:14:47 by sdunckel         ###   ########.fr       */
+/*   Created: 2019/10/08 14:34:19 by sdunckel          #+#    #+#             */
+/*   Updated: 2019/10/08 14:36:57 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	char				*str;
-	unsigned int		i;
+	t_list	*lst_ptr;
 
-	i = 0;
-	if (!(str = (char*)malloc(sizeof(char) * ft_strlen(s) + 1)))
-		return (NULL);
-	while (s[i])
+	lst_ptr = *lst;
+	while (lst_ptr)
 	{
-		str[i] = (*f)(i, s[i]);
-		i++;
+		(*del)(lst_ptr);
+		free(lst_ptr);
+		lst_ptr = lst_ptr->next;
 	}
-	str[i] = '\0';
-	return (str);
+	*lst = NULL;
 }
