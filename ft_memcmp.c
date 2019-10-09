@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 18:18:21 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 18:05:43 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 10:43:29 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (ss1[i] != ss2[i])
-			return (ss1[i] - ss2[i]);
+			return ((unsigned char)ss1[i] - (unsigned char)ss2[i]);
 		i++;
 	}
 	return (0);

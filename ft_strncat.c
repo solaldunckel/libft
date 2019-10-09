@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 09:16:30 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 09:18:01 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 10:06:14 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 		s2++;
 		n--;
 	}
+	s1[i] = '\0';
 	return (s1);
 }
