@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 12:25:12 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 12:33:46 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 15:43:10 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,10 @@ int 	main(int argc, char **argv)
 	char 	ato[] = "2147483647";
 	printf("ft_atoi : %d // atoi : %d\n", ft_atoi(ato), atoi(ato));
 
+	// ft_atoi_base
+	char 	ato_b[] = "01";
+	printf("ft_atoi_base : %d\n", ft_atoi_base(ato_b, "02"));
+
 	//ft_itoa
 	int		ito = -2147483648;
 	printf("ft_itoa : %s\n", ft_itoa(ito));
@@ -97,6 +101,9 @@ int 	main(int argc, char **argv)
 
 	// ft_itoa
 	printf("ft_itoa : %s\n", ft_itoa(n));
+
+	// ft_convert_base
+	printf("ft_convert_base : %s\n", ft_convert_base("01110", "01", "0123456789"));
 
 	printf("\n");
 	// LISTS

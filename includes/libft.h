@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:57:51 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 13:45:20 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 15:41:02 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,13 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(void *));
 ** Other Functions
 */
 
+size_t				ft_is_space(char c);
+int					ft_is_in_stri(char c, char *str);
 size_t				ft_intlen(int n);
+size_t				ft_intlen_base(int n, char *base);
+int					ft_check_base(char *base);
+int					ft_atoi_base(char *str, char *base);
+char				*ft_convert_base(char *nbr, char *base_from, char *base_to);
+char				*ft_itoa_base(int n, char *base);
 
 #endif

@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 11:01:38 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 14:55:21 by sdunckel         ###   ########.fr       */
+/*   Created: 2019/10/09 15:31:09 by sdunckel          #+#    #+#             */
+/*   Updated: 2019/10/09 15:41:26 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *nptr)
+char	*ft_itoa_base(int n, char *base)
 {
-	int		atoi;
-	int		negative;
+	char	*str;
+	long	num;
+	int		neg;
+	int		num_len;
 
-	atoi = 0;
-	negative = 0;
-	while (ft_is_space(*nptr))
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	num = n;
+	neg = 0;
+	num_len = ft_intlen_base(num, base);
+	if (num < 0)
 	{
-		if (*nptr == '-')
-			negative = 1;
-		nptr++;
+		num_len++;
+		neg = 1;
+		num = -num;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
+	if (!(str = (char*)malloc(sizeof(char) * 34)))
+		return (NULL);
+	str[num_len] = '\0';
+	while (num_len)
 	{
-		atoi = atoi * 10 + *nptr - 48;
-		nptr++;
+		str[--num_len] = num % ft_strlen(base) + 48;
+		num = num / ft_strlen(base);
 	}
-	return (negative ? -atoi : atoi);
+	if (neg)
+		str[0] = '-';
+	return (str);
 }

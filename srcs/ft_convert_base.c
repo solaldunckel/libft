@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 09:40:41 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 14:50:58 by sdunckel         ###   ########.fr       */
+/*   Created: 2019/10/09 14:59:20 by sdunckel          #+#    #+#             */
+/*   Updated: 2019/10/09 15:40:01 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
-	int		start;
-	int		end;
+	long	num;
+	int		i;
+	char	*tab;
 
-	start = 0;
-	end = ft_strlen(s1);
-	while (ft_is_in_stri(s1[start], (char*)set) >= 0)
-		start++;
-	while (ft_is_in_stri(s1[end - 1], (char*)set) >= 0)
-		end--;
-	return (ft_substr(s1, start, end - start));
+	i = 0;
+	if (!ft_check_base(base_from) || !ft_check_base(base_to))
+		return (NULL);
+	num = ft_atoi_base(nbr, base_from);
+	tab = ft_itoa_base(num, base_to);
+	return (tab);
 }

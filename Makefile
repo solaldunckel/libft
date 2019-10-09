@@ -6,7 +6,7 @@
 #    By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 12:02:19 by sdunckel          #+#    #+#              #
-#    Updated: 2019/10/09 14:01:39 by sdunckel         ###   ########.fr        #
+#    Updated: 2019/10/09 15:39:39 by sdunckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,9 @@ SRCS	= $(addprefix ${FOLDER}/, ft_atoi.c ft_isalnum.c ft_isalpha.c \
 			ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_putendl.c \
 			ft_strncpy.c ft_memalloc.c ft_strnew.c ft_strdel.c ft_strncat.c \
-			ft_memdel.c ft_strcmp.c)
+			ft_memdel.c ft_strcmp.c ft_is_space.c ft_is_in_stri.c \
+			ft_atoi_base.c ft_check_base.c ft_convert_base.c ft_itoa_base.c \
+			ft_intlen_base.c)
 OBJS	= ${SRCS:.c=.o}
 HEADER	= includes
 FOLDER	= srcs
@@ -34,7 +36,7 @@ RM		= rm -f
 
 $(NAME):	${OBJS}
 			@ar -rcs ${NAME} ${OBJS}
-			# @${CC} ${CFLAGS} ${SRCS} main.c -I ${HEADER} -o libft_out
+			@${CC} ${CFLAGS} ${SRCS} srcs/main.c -I ${HEADER} -o libft_out
 
 %.o: %.c
 			@${CC} -c ${CFLAGS} -o $@ $< -I ${HEADER}

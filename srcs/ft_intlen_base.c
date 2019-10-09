@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_intlen_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 09:40:41 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 14:50:58 by sdunckel         ###   ########.fr       */
+/*   Created: 2019/10/09 15:35:31 by sdunckel          #+#    #+#             */
+/*   Updated: 2019/10/09 15:42:44 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_strtrim(char const *s1, char const *set)
+size_t		ft_intlen_base(int n, char *base)
 {
-	int		start;
-	int		end;
+	size_t		len;
+	long		base_len;
+	long		num;
 
-	start = 0;
-	end = ft_strlen(s1);
-	while (ft_is_in_stri(s1[start], (char*)set) >= 0)
-		start++;
-	while (ft_is_in_stri(s1[end - 1], (char*)set) >= 0)
-		end--;
-	return (ft_substr(s1, start, end - start));
+	num = n;
+	len = 1;
+	base_len = ft_strlen(base);
+	if (num < 0)
+		num = -num;
+	while (num >= base_len)
+	{
+		num = num / base_len;
+		len++;
+	}
+	return (len);
 }
