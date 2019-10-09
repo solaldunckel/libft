@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:28:28 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 14:47:01 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 15:47:57 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_is_in_stri(char c, char *str)
 {
-	int 	i;
+	int		i;
 
 	i = 0;
 	while (str[i])

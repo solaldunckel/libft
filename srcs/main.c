@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 12:25:12 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 15:43:10 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 17:21:15 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int 	main(int argc, char **argv)
 	printf("ft_strjoin : [%s]\n", ft_strjoin("allo", "maman"));
 
 	// ft_strtrim
-	printf("ft_strtrim : [%s]\n", ft_strtrim("    je test toutmon frere    ", " e"));
+	printf("ft_strtrim : [%s]\n", ft_strtrim("", " "));
 
 	// ft_split
 	char 	**tab;

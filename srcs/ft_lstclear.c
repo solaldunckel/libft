@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:34:19 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 12:35:24 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 17:20:42 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	tmp = *lst;
 	while (tmp)
 	{
-		(*del)(tmp->content);
-		free(tmp->content);
+		ft_lstdelone(*lst, (*del));
 		tmp = tmp->next;
 	}
 	*lst = NULL;
