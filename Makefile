@@ -6,7 +6,7 @@
 #    By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 12:02:19 by sdunckel          #+#    #+#              #
-#    Updated: 2019/10/08 16:29:10 by sdunckel         ###   ########.fr        #
+#    Updated: 2019/10/08 17:27:49 by sdunckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,12 +26,12 @@ OBJS	= ${SRCS:.c=.o}
 HEADER	= libft.h
 
 CC		= gcc
-CFLAGS 	=
+CFLAGS 	= -Wall -Wextra -Werror
 RM		= rm -f
 
 ${NAME}:	${OBJS}
 			@ar -rcs ${NAME} ${OBJS}
-			@${CC} ${CFLAGS} ${SRCS} main.c -I ${HEADER} -o libft_out
+			# @${CC} ${CFLAGS} ${SRCS} main.c -I ${HEADER} -o libft_out
 
 %.o: %.c
 			@${CC} -c ${SRCS} ${CFLAGS} -I ${HEADER}

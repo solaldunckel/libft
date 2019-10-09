@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:52:13 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 15:24:15 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 17:06:41 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t		i;
-	(void)c;
+	char		*s;
+
+	s = b;
 	i = 0;
 	while (i < len)
 	{
-		//b = c;
-		b++;
+		s[i] = c;
 		i++;
 	}
 	return (b);

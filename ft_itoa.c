@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 12:54:59 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 16:22:42 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 17:55:07 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ char	*ft_itoa(int n)
 	if (!(str = (char*)malloc(sizeof(char) * num_len + 1)))
 		return (NULL);
 	str[num_len] = '\0';
-	while (num > 0)
+	while (num_len)
 	{
 		str[--num_len] = num % 10 + 48;
 		num = num / 10;
 	}
 	if (neg)
-		str[--num_len] = '-';
+		str[0] = '-';
 	return (str);
 }

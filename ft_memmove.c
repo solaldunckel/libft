@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 18:11:10 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 15:26:53 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 17:36:13 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,16 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t		i;
-	void		*origin_dst;
-	void		*pt_dst;
+	char		*sd;
+	char		*sr;
 
-	pt_dst = dst;
-	while (dst)
-	{
-		origin_dst = dst;
-		dst++;
-	}
-	dst = pt_dst;
+	sd = dst;
+	sr = (void*)src;
 	i = 0;
 	while (i < len)
 	{
-		dst = (void*)src;
-		dst++;
-		src++;
+		sd[i] = sr[i];
 		i++;
 	}
-	return (origin_dst);
+	return (dst);
 }

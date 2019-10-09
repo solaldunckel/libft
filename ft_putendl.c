@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 09:05:58 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 09:06:34 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/08 16:50:21 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl(char *s)
 {
-	ft_putstr(*s);
+	ft_putstr(s);
 	ft_putchar('\n');
 }
