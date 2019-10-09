@@ -6,12 +6,11 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 09:54:44 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 15:30:58 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 11:38:10 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static size_t	count_words(char const *s, char c)
 {

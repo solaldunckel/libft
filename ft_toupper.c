@@ -6,9 +6,11 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:37:22 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/07 13:45:17 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 11:41:05 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_toupper(int c)
 {

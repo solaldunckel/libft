@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:41:16 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 14:42:35 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 12:36:03 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst)
+	t_list	*tmp;
+
+	tmp = lst;
+	while (tmp)
 	{
-		(*f)(lst->content);
-		lst = lst->next;
+		(*f)(tmp->content);
+		tmp = tmp->next;
 	}
 }

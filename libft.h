@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:57:51 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 11:02:08 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 12:38:30 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
+
+# define TRUE 1
+# define FALSE 0
 
 typedef struct		s_list
 {

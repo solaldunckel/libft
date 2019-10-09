@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:17:51 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 14:22:24 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 12:02:16 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	new->next = *alst;
+	*alst = new;
 }

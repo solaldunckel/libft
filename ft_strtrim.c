@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 09:40:41 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 10:45:02 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 11:47:26 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (is_charset(s1[start], set))
 		start++;
-	start++;
-	while (is_charset(s1[end], set))
+	while (is_charset(s1[end - 1], set))
 		end--;
 	return (ft_substr(s1, start, end - start));
 }

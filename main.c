@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 12:25:12 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 16:28:46 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 12:33:46 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int 	main(int argc, char **argv)
 	printf("ft_strjoin : [%s]\n", ft_strjoin("allo", "maman"));
 
 	// ft_strtrim
-	printf("ft_strtrim : [%s]\n", ft_strtrim(" je test toutmon frere", "e"));
+	printf("ft_strtrim : [%s]\n", ft_strtrim("    je test toutmon frere    ", " e"));
 
 	// ft_split
 	char 	**tab;
@@ -97,6 +97,32 @@ int 	main(int argc, char **argv)
 
 	// ft_itoa
 	printf("ft_itoa : %s\n", ft_itoa(n));
+
+	printf("\n");
+	// LISTS
+
+	t_list		*list;
+	t_list		*list2;
+	t_list		*list3;
+
+	list = ft_lstnew("test");
+	list2 = ft_lstnew("begin list");
+	list3 = ft_lstnew("end list");
+	ft_lstadd_front(&list, list2);
+	ft_lstadd_back(&list2, list3);
+	printf("ft_lstsize : %d\n", ft_lstsize(list));
+
+	t_list		*tmp;
+
+	tmp = list;
+	while (tmp)
+	{
+		printf("list : %s\n", tmp->content);
+		tmp = tmp->next;
+	}
+	t_list		*last_list;
+	last_list = ft_lstlast(list2);
+	printf("ft_lstlast: %s\n", last_list->content);
 
 	printf("\n");
 }

@@ -6,9 +6,11 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:01:38 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 16:09:58 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 11:35:33 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_atoi(const char *nptr)
 {

@@ -6,12 +6,11 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 12:54:59 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 17:55:07 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/09 12:21:51 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_itoa(int n)
 {
