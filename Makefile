@@ -6,7 +6,7 @@
 #    By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 12:02:19 by sdunckel          #+#    #+#              #
-#    Updated: 2019/10/08 17:27:49 by sdunckel         ###   ########.fr        #
+#    Updated: 2019/10/09 09:36:56 by sdunckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRCS	= ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_strlen.c \
 			ft_itoa.c ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c \
 			ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstadd_front.c \
 			ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-			ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_putendl.c
+			ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_putendl.c ft_strncpy.c \
+			ft_memalloc.c ft_strnew.c ft_strdel.c ft_strncat.c ft_memdel.c
 OBJS	= ${SRCS:.c=.o}
 HEADER	= libft.h
 
