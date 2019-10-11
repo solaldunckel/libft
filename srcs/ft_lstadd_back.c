@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:29:07 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/08 14:31:10 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/11 14:05:42 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,15 @@
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	t_list	*last;
+	t_list	*tmp;
 
-	last = ft_lstlast(*alst);
-	last->next = new;
+	if (*alst)
+	{
+		tmp = *alst;
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = new;
+	}
+	else
+		*alst = new;
 }

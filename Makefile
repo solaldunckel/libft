@@ -6,7 +6,7 @@
 #    By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 12:02:19 by sdunckel          #+#    #+#              #
-#    Updated: 2019/10/09 17:50:52 by sdunckel         ###   ########.fr        #
+#    Updated: 2019/10/11 14:03:09 by sdunckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +89,6 @@ RM			= rm -f
 
 $(NAME):	${OBJS}
 			@ar -rcs ${NAME} ${OBJS}
-			@${CC} ${CFLAGS} ${SRCS} srcs/main.c -I ${HEADER} -o libft_out
 
 %.o: %.c
 			@${CC} -c ${CFLAGS} -o $@ $< -I ${HEADER}
@@ -100,7 +99,7 @@ clean:
 			@${RM} ${OBJS}
 
 fclean:		clean
-			@${RM} ${NAME} libft_out
+			@${RM} ${NAME}
 
 re:			fclean all
 
