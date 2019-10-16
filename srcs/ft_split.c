@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 09:54:44 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/09 11:38:10 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/16 22:03:07 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char			**ft_split(char const *s, char c)
 	i = -1;
 	j = 0;
 	k = 0;
-	if (!(tab = malloc(sizeof(char*) * count_words(s, c) + 1)))
+	if (!(tab = malloc(sizeof(char*) * (count_words(s, c) + 1))))
 		return (NULL);
 	while (s[++i])
 	{
