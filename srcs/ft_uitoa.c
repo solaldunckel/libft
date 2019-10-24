@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen.c                                        :+:      :+:    :+:   */
+/*   ft_uitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 13:03:37 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/24 22:50:02 by sdunckel         ###   ########.fr       */
+/*   Created: 2019/10/24 22:38:45 by sdunckel          #+#    #+#             */
+/*   Updated: 2019/10/24 22:39:01 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_intlen(intmax_t n)
+char	*ft_uitoa(uintmax_t n)
 {
-	size_t		len;
+	char		*str;
+	int			num_len;
 
-	len = 0;
-	if (!n)
-		len++;
-	while (n)
+	num_len = ft_uintlen(n);
+	if (!(str = ft_calloc((num_len + 1), sizeof(char))))
+		return (NULL);
+	str[num_len] = '\0';
+	while (num_len)
 	{
+		str[--num_len] = n % 10 + 48;
 		n = n / 10;
-		len++;
 	}
-	return (len);
+	return (str);
 }

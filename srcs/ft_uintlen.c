@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen.c                                        :+:      :+:    :+:   */
+/*   ft_uintlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 13:03:37 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/24 22:50:02 by sdunckel         ###   ########.fr       */
+/*   Created: 2019/10/24 22:39:45 by sdunckel          #+#    #+#             */
+/*   Updated: 2019/10/24 22:39:58 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_intlen(intmax_t n)
+size_t	ft_uintlen(uintmax_t n)
 {
 	size_t		len;
 
-	len = 0;
-	if (!n)
-		len++;
-	while (n)
+	len = 1;
+	while (n >= 10)
 	{
 		n = n / 10;
 		len++;

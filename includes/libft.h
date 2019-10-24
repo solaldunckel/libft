@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:57:51 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/24 22:24:36 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/10/24 22:50:12 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,12 +114,14 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *));
 
 size_t				ft_is_space(char c);
 int					ft_is_in_stri(char c, char *str);
-size_t				ft_intlen(uintmax_t n);
+size_t				ft_intlen(intmax_t n);
 size_t				ft_intlen_base(uintmax_t n, char *base);
 int					ft_check_base(char *base);
 intmax_t			ft_atoi_base(char *str, char *base);
 char				*ft_convert_base(char *nbr, char *base_from, char *base_to);
 char				*ft_itoa_base(uintmax_t n, char *base);
 char				*ft_c_to_str(char c);
+char				*ft_uitoa(uintmax_t n);
+size_t				ft_uintlen(uintmax_t n);
 
 #endif
