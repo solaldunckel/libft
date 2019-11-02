@@ -6,7 +6,7 @@
 #    By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 12:02:19 by sdunckel          #+#    #+#              #
-#    Updated: 2019/11/02 15:30:45 by sdunckel         ###   ########.fr        #
+#    Updated: 2019/11/02 16:25:59 by sdunckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS		= \
 
 OBJS			= ${SRCS:.c=.o}
 
-HEADER			= ../includes
+HEADER			= ../../includes
 
 CC				= gcc
 CFLAGS 			= -Wall -Wextra -Werror
@@ -32,8 +32,6 @@ all:			${NAME}
 
 $(NAME):		${OBJS}
 				@ar -rcs ${NAME} ${OBJS}
-
-bonus:			${NAME}
 
 %.o: %.c
 				@${CC} ${CFLAGS} -I ${HEADER} -o $@ -c $<

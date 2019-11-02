@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 11:17:21 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/10/24 22:24:29 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/11/02 15:46:18 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 32
+#  define BUFFER_SIZE 64
 # endif
 
 # define SUCCESS 1

@@ -6,7 +6,7 @@
 #    By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 12:02:19 by sdunckel          #+#    #+#              #
-#    Updated: 2019/11/02 15:33:55 by sdunckel         ###   ########.fr        #
+#    Updated: 2019/11/02 16:27:31 by sdunckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,7 +88,7 @@ OBJS		= ${SRCS:.c=.o}
 HEADER		= includes
 FOLDER		= srcs
 
-FT_PRINTF 	= ft_printf
+FT_PRINTF 	= $(FOLDER)/ft_printf
 
 CC			= gcc
 CFLAGS 		= -Wall -Wextra -Werror
@@ -104,12 +104,15 @@ $(NAME):	${OBJS}
 
 all:		${NAME}
 
+test:		$(NAME)
+			@${CC} main.c $(NAME) -I ${HEADER}
+
 clean:
 			@${RM} ${OBJS}
 			@make clean -C $(FT_PRINTF)
 
 fclean:		clean
-			@${RM} ${NAME}
+			@${RM} ${NAME} a.out
 			@make fclean -C $(FT_PRINTF)
 
 re:			fclean all
