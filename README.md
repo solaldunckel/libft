@@ -1,5 +1,10 @@
 # Libft
 
+## Final grade : 107/115
+
+#### Mandatory : 100/100
+#### Bonus : 7/15
+
 ## Description
 
 First project of 42 cursus. You have to rewrite some functions from the libc. <br>
