@@ -6,7 +6,7 @@
 #    By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 12:02:19 by sdunckel          #+#    #+#              #
-#    Updated: 2019/11/22 11:49:39 by sdunckel         ###   ########.fr        #
+#    Updated: 2019/11/22 12:05:38 by sdunckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,6 +90,7 @@ SRCS_LIST	= \
 				ft_strlen_c.c
 SRCS		= $(addprefix ${FOLDER}/, ${SRCS_LIST})
 OBJS		= ${SRCS:.c=.o}
+
 HEADER		= includes
 FOLDER		= srcs
 
@@ -109,15 +110,12 @@ $(NAME):	${OBJS}
 
 all:		${NAME}
 
-test:		$(NAME)
-			@${CC} main.c $(NAME) -I ${HEADER}
-
 clean:
 			@${RM} ${OBJS}
 			@make clean -C $(FT_PRINTF)
 
 fclean:		clean
-			@${RM} ${NAME} a.out
+			@${RM} ${NAME}
 			@make fclean -C $(FT_PRINTF)
 
 re:			fclean all
