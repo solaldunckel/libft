@@ -6,7 +6,7 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:57:51 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/11/22 11:49:25 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/11/22 15:35:08 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char				**ft_split(char const *s, char c);
 char				**ft_ssplit(char const *s, char *set);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_atoi(const char *nptr);
-double				ft_atof(char *str);
+float				ft_atof(char *str);
 char				*ft_itoa(intmax_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);

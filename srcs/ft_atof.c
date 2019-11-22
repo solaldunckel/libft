@@ -6,15 +6,15 @@
 /*   By: sdunckel <sdunckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 23:17:32 by sdunckel          #+#    #+#             */
-/*   Updated: 2019/11/17 15:33:21 by sdunckel         ###   ########.fr       */
+/*   Updated: 2019/11/22 15:35:02 by sdunckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double		ft_atof(char *str)
+float		ft_atof(char *str)
 {
-	double	atof;
+	float	atof;
 	int		atoi;
 	int		i;
 	int		fac;
